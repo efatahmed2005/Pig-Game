@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-linear-[135deg] from-green-800 via-cyan-700 to-zinc-400 min-h-screen">
+    <h1 class="text-3xl font-bold text-amber-400 text-center my-3">Score 50 and win.</h1>
+    <!-- main section -->
+    <section
+        class="bg-linear-[140deg] from-blue-800 via-yellow-800 to-green-800 min-h-[70vh] max-w-[70%] mx-auto my-32 flex flex-col p-2.5 rounded-4xl">
+        <button type="reset" class="bg-emerald-50 border-0 rounded-2xl px-2 py-1  mx-auto mt-8 block cursor-pointer"
+            id="newGame">New
+            Game</button>
+
+        <div id="players" class="grid grid-cols-5 gap-4 ">
+            <div class="col-span-2 bg-yellow-100/20 rounded-2xl" id="player_0">
+                <h1 class="text-2xl font-bold text-amber-400 text-center">Player 1</h1>
+                <h1 class="text-5xl text-yellow-300 text-center my-8" id="Fscore0">00</h1>
+
+                <div class="bg-yellow-400 lg:text-3xl font-semibold lg:w-[40%] mx-auto p-5 rounded-2xl text-center"
+                    id="message0">
+                    <h1 class="">Score:</h1>
+                    <h1 id="score-0">00</h1>
+                </div>
+            </div>
+
+            <div id="cdiv" class="flex flex-col justify-center items-center col-span-1">
+                <div class="w-[50%] h-auto mx-auto mt-7"> <img src="images/2.png" alt="" id="image" class=" rounded-sm">
+                </div>
+                <button
+                    class="text-amber-100 bg-blue-700 border-0 rounded-2xl px-3 py-1 items-center mt-52 cursor-pointer"
+                    id="roll_dice">Roll
+                    Dice</button>
+                <button
+                    class="text-amber-100 bg-blue-700 border-0 rounded-2xl px-3 py-1 items-center my-3 cursor-pointer"
+                    id="hold">Hold</button>
+            </div>
+
+            <div id="player_1" class="items-center col-span-2 rounded-2xl">
+                <h1 class="text-2xl font-bold text-amber-400 text-center">Player 2</h1>
+                <h1 class="text-5xl text-yellow-300 text-center my-8" id="Fscore1">00</h1>
+
+                <div class="bg-yellow-400 lg:text-3xl font-semibold lg:w-[40%]  mx-auto p-5 rounded-2xl text-center"
+                    id="message1">
+                    <h1 class="">Score:</h1>
+                    <h1 id="score-1">00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
