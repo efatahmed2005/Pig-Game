@@ -45,6 +45,8 @@ holdBtn.addEventListener("click", function () {
   }
   finalScore[activePlayer] += currentScore;
   if (finalScore[activePlayer] >= 50) {
+    document.getElementById("winMsg").textContent =
+      `Player ${activePlayer + 1} wins !`;
     document
       .getElementById(`player_${activePlayer}`)
       .classList.add("bg-yellow-900");
@@ -66,7 +68,7 @@ newBtn.addEventListener("click", function () {
   if (document.getElementById("player_1").classList.contains("bg-yellow-900")) {
     document.getElementById("player_1").classList.remove("bg-yellow-900");
   }
-
+  document.getElementById("winMsg").textContent = "";
   document.getElementById("score-0").textContent = "00";
   document.getElementById("score-1").textContent = "00";
 });
