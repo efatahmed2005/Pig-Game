@@ -68,6 +68,15 @@ newBtn.addEventListener("click", function () {
   if (document.getElementById("player_1").classList.contains("bg-yellow-900")) {
     document.getElementById("player_1").classList.remove("bg-yellow-900");
   }
+
+  document.getElementById("player_1").classList.remove("bg-yellow-100/20");
+
+  if (
+    !document.getElementById("player_0").classList.contains("bg-yellow-900")
+  ) {
+    document.getElementById("player_0").classList.add("bg-yellow-100/20");
+  }
+
   document.getElementById("winMsg").textContent = "";
   document.getElementById("score-0").textContent = "00";
   document.getElementById("score-1").textContent = "00";
