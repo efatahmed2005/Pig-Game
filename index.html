@@ -14,7 +14,7 @@
     <h1 class="text-3xl font-bold text-amber-400 text-center my-3">Score 50 and win.</h1>
     <!-- main section -->
     <section
-        class="bg-linear-[140deg] from-blue-800 via-yellow-800 to-green-800 min-h-[70vh] max-w-[70%] mx-auto my-32 flex flex-col p-2.5 rounded-4xl">
+        class="relative bg-linear-[140deg] from-blue-800 via-yellow-800 to-green-800 min-h-[70vh] max-w-[70%] mx-auto my-32 flex flex-col p-2.5 rounded-4xl">
         <button type="reset" class="bg-emerald-50 border-0 rounded-2xl px-2 py-1  mx-auto mt-8 block cursor-pointer"
             id="newGame">New
             Game</button>
@@ -34,7 +34,6 @@
             <div id="cdiv" class="flex flex-col justify-center items-center col-span-1">
                 <div class="w-[50%] h-auto mx-auto mt-7"> <img src="images/2.png" alt="" id="image" class=" rounded-sm">
                 </div>
-                <h1 class="text-xl font-bold text-blue-300 text-center mt-5" id="winMsg"></h1>
                 <button
                     class="text-amber-100 bg-blue-700 border-0 rounded-2xl px-3 py-1 items-center mt-52 cursor-pointer"
                     id="roll_dice">Roll
@@ -54,6 +53,11 @@
                     <h1 id="score-1">00</h1>
                 </div>
             </div>
+        </div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-green-700 flex items-center justify-center rounded-2xl"
+            id="winMsg">
+            <h1 class="text-xl font-semibold text-amber-300" id="winName">Hello</h1>
         </div>
     </section>
 </body>

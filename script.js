@@ -4,8 +4,10 @@ const rollBtn = document.getElementById("roll_dice");
 const holdBtn = document.getElementById("hold");
 const newBtn = document.getElementById("newGame");
 const diceImg = document.getElementById("image");
+const winMessage = document.getElementById("winMsg");
 let finalScore = [0, 0];
 diceImg.classList.add("invisible");
+winMessage.classList.add("invisible");
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
@@ -45,7 +47,8 @@ holdBtn.addEventListener("click", function () {
   }
   finalScore[activePlayer] += currentScore;
   if (finalScore[activePlayer] >= 50) {
-    document.getElementById("winMsg").textContent =
+    winMessage.classList.remove("invisible");
+    document.getElementById("winName").textContent =
       `Player ${activePlayer + 1} wins !`;
     document
       .getElementById(`player_${activePlayer}`)
@@ -76,8 +79,8 @@ newBtn.addEventListener("click", function () {
   ) {
     document.getElementById("player_0").classList.add("bg-yellow-100/20");
   }
-
-  document.getElementById("winMsg").textContent = "";
+  winMessage.classList.add("invisible");
+  document.getElementById("winName").textContent = "";
   document.getElementById("score-0").textContent = "00";
   document.getElementById("score-1").textContent = "00";
 });
